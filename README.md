@@ -59,6 +59,30 @@ Default: `undefined`
 
 Sets the base path for **input files**. **_It's recommended to set this_**.
 
+#### prepend
+Type: `String|Function`  
+Default: `undefined`  
+
+Prepends a string to the filepath written to the manifest. Example with function:
+```
+{prepend: function(filepath){
+  if(filepath.indexOf('/css/'))
+  return filepath + '?v='+Math.random();
+}}
+```
+
+#### append
+Type: `String|Function`  
+Default: `undefined`  
+
+Appends a string to the filepath written to the manifest. Example with function:
+```
+{append: function(filepath){
+  if(filepath.indexOf('/css/'))
+  return filepath + '?v='+Math.random();
+}}
+```
+
 #### cache
 Type: `String`	
 Default: `undefined`	
